@@ -27,7 +27,7 @@ def remove_from_graph(node):
                     last_occupied = v - 1 + n - 2
 
     for x in g.successors(node.item):
-        if dll_nodes[x] != None and out_degree != 0:
+        if dll_nodes[x] != None and out_degree[x] != 0:
             in_degree[x] -= 1
             v = out_degree[x] - in_degree[x] - 1
             bins[v + n - 2].delete(dll_nodes[x])
